@@ -14,6 +14,7 @@
 		10CE3E462ABFC1C500C27BA1 /* WeatherTutorialTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CE3E452ABFC1C500C27BA1 /* WeatherTutorialTests.swift */; };
 		10CE3E502ABFC1C500C27BA1 /* WeatherTutorialUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CE3E4F2ABFC1C500C27BA1 /* WeatherTutorialUITests.swift */; };
 		10CE3E522ABFC1C500C27BA1 /* WeatherTutorialUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CE3E512ABFC1C500C27BA1 /* WeatherTutorialUITestsLaunchTests.swift */; };
+		10CE3E5F2AC14D0C00C27BA1 /* WeatherButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CE3E5E2AC14D0C00C27BA1 /* WeatherButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		10CE3E4B2ABFC1C500C27BA1 /* WeatherTutorialUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeatherTutorialUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		10CE3E4F2ABFC1C500C27BA1 /* WeatherTutorialUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherTutorialUITests.swift; sourceTree = "<group>"; };
 		10CE3E512ABFC1C500C27BA1 /* WeatherTutorialUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherTutorialUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		10CE3E5E2AC14D0C00C27BA1 /* WeatherButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 			children = (
 				10CE3E342ABFC1C300C27BA1 /* WeatherTutorialApp.swift */,
 				10CE3E362ABFC1C300C27BA1 /* ContentView.swift */,
+				10CE3E5E2AC14D0C00C27BA1 /* WeatherButton.swift */,
 				10CE3E382ABFC1C500C27BA1 /* Assets.xcassets */,
 				10CE3E3A2ABFC1C500C27BA1 /* Preview Content */,
 			);
@@ -259,6 +262,7 @@
 			files = (
 				10CE3E372ABFC1C300C27BA1 /* ContentView.swift in Sources */,
 				10CE3E352ABFC1C300C27BA1 /* WeatherTutorialApp.swift in Sources */,
+				10CE3E5F2AC14D0C00C27BA1 /* WeatherButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
