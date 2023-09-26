@@ -12,10 +12,10 @@ struct ContentView: View {
     
     var body: some View {
         ZStack {
-            BackgroundView(isNight: $isNight)
+            BackgroundView(isNight: isNight)
             VStack {
                 CityView(city: "Austin, TX")
-                MainWeatherView(imageName: isNight ? "cloud.moon.fill" : "cloud.sun.fill", temperature: 80)
+                MainWeatherView(imageName: isNight ? "cloud.moon.fill" : "cloud.sun.fill", temperature: 80, isNight: isNight)
                 
                 HStack(spacing: 20) {
                     WeatherDayView(dayOfWeek: "TUE",
@@ -41,8 +41,8 @@ struct ContentView: View {
                     isNight.toggle()
                 } label: {
                     WeatherButton(title: "Change Day Time",
-                                  textColor: .blue,
-                                  backgroundColor: .white)
+                                  textColor: .white,
+                                  backgroundColor: .teal)
                 }
                 
                 Spacer()
@@ -68,7 +68,7 @@ struct WeatherDayView: View {
                 .font(.system(size: 18, weight: .medium))
                 .foregroundColor(.white)
             Image(systemName: imageName)
-                .renderingMode(.original)
+                .symbolRenderingMode(.multicolor)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 40,height: 40)
@@ -80,12 +80,12 @@ struct WeatherDayView: View {
 }
 
 struct BackgroundView: View {
-    @Binding var isNight: Bool
+    var isNight: Bool
     var body: some View {
         LinearGradient(colors: [isNight ? .black : .blue, isNight ? .gray : Color("lightblue")],
                        startPoint: .topLeading,
                        endPoint: .bottomTrailing)
-        .edgesIgnoringSafeArea(.all)
+        .ignoresSafeArea()
     }
 }
 
@@ -102,11 +102,13 @@ struct CityView: View {
 struct MainWeatherView: View {
     var imageName: String
     var temperature: Int
+    var isNight: Bool
     var body: some View {
         VStack(spacing: 8) {
             Image(systemName: imageName)
-                .renderingMode(.original)
+                .symbolRenderingMode(.palette)
                 .resizable()
+                .foregroundStyle(isNight ? .gray : .white, isNight ? .brown : .yellow)
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 180,height: 180)
             Text("\(temperature)°")
